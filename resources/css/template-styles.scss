@@ -1,0 +1,276 @@
+/*-------------------------------------------------------------
+Template Name: Ebook
+Template URL: 
+Author Name: SoftTech IT
+Author URL: https://themeforest.net/user/softtech-it/portfolio
+Version: 1.0
+Description: 
+Tags: react,react-dom,saas,Material UI ,tailwindcss, lodash,  vite, ecommerce,  responsive, retail, rtl, shop, shopping, store, template, book store
+Text Domain: Ebook
+-------------------------------------------------------------*/
+
+/* 
+import  common files and font start 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+@import "varible.scss";
+
+/* 
+common styles  start 
+*/
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+.primary-text-color {
+    color: $primary-color;
+}
+.primary-bg-color {
+    background: $primary-color;
+}
+.secondary-text-color {
+    color: $secondary-color;
+}
+.secondary-bg-color {
+    background: $secondary-color;
+}
+.secondary-lite-bg-color {
+    background: $secondary-lite-color;
+}
+.teritary-bg {
+    background: $teritary-color;
+}
+.gray-bg {
+    background-color: $gray-color;
+}
+.choclate-bg {
+    background: $choclate-color;
+}
+.template-gradient-btn {
+    transition: 0.5s;
+    background: linear-gradient(
+        44deg,
+        rgba(107, 214, 255) 24%,
+        rgba(251, 55, 117) 77%
+    );
+    &:hover {
+        background: linear-gradient(
+            -39deg,
+            rgb(107, 214, 255) 24%,
+            rgb(251, 55, 117) 77%
+        );
+    }
+}
+
+.template-gradient-plain-btn {
+    transition: 0.5s;
+    background: linear-gradient(
+        -3deg,
+        rgb(107, 214, 255) -98%,
+        rgb(251, 55, 117) 77%
+    );
+    &:hover {
+        background: linear-gradient(
+            44deg,
+            rgba(107, 214, 255) 24%,
+            rgba(251, 55, 117) 77%
+        );
+    }
+}
+
+.bg-postion-y-50 {
+    background-position-y: 60%;
+}
+.footer-width {
+    width: calc(100% - 100px);
+}
+.ebook-slider-range {
+    &.css-187mznn-MuiSlider-root {
+        padding: 0px;
+    }
+    .MuiSlider-track.css-1gv0vcd-MuiSlider-track {
+        color: $yellow-color !important;
+    }
+    .css-eg0mwd-MuiSlider-thumb {
+        background: $primary-color;
+        width: 15px;
+        height: 15px;
+    }
+    .css-14pt78w-MuiSlider-rail {
+        background: $secondary-color;
+    }
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    border: 1px solid transparent;
+    padding: 4px 18px;
+    border-right: 4px solid $primary-color;
+    border-radius: 5px;
+    background-color: $white-color;
+    box-shadow: 1.268px 2.719px 10px 0px rgba(0, 18, 124, 0.1);
+}
+.MuiTabs-root.css-1ujnqem-MuiTabs-root {
+    position: relative !important;
+}
+.MuiButtonBase-root.MuiTabScrollButton-root.MuiTabScrollButton-horizontal.Mui-disabled.MuiTabs-scrollButtons.MuiTabs-scrollButtonsHideMobile.css-145v6pe-MuiButtonBase-root-MuiTabScrollButton-root {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    border: 1px solid $secondary-color !important;
+}
+
+.login-wrapper {
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 35px 0px rgba(0, 18, 124, 0.1);
+}
+
+/* 
+buttons style start 
+*/
+.btn-border-right {
+    border: 1px solid transparent;
+    // padding: 4px 18px;
+    border-right: 4px solid #fb3775;
+    // border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 1.268px 2.719px 10px 0px rgba(0, 18, 124, 0.1);
+}
+
+.tab-btn {
+    position: relative;
+    margin: 10px 5px 1px !important;
+    border-radius: 5px !important;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0, 18, 124, 0.1);
+    overflow: hidden !important;
+    border: 1px solid transparent;
+    text-align: center;
+
+    &.Mui-selected {
+        &::before {
+            right: 0%;
+        }
+        .label {
+            color: $white-color;
+        }
+    }
+    &::before {
+        content: "";
+        width: 100%;
+        height: 120%;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        right: -98%;
+        background: $primary-color;
+        z-index: -1;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        &::before {
+            right: 0%;
+        }
+        .label {
+            color: $white-color;
+        }
+    }
+}
+
+.css-1aquho2-MuiTabs-indicator {
+    background-color: transparent !important;
+}
+
+.h-320 {
+    height: 320px;
+}
+
+/* 
+swipper js style start 
+*/
+.swiper-slide {
+    padding: 10px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px !important;
+    background: $primary-color;
+    padding: 10px;
+    border-radius: 5px;
+    color: $white-color;
+}
+
+/* 
+discount time
+*/
+.discount-time {
+    border-radius: 5px;
+    background-color: rgb(255, 248, 242);
+    box-shadow: 0px 0px 30px 0px rgba(71, 6, 0, 0.1);
+}
+
+/* 
+single book start 
+*/
+.single-book {
+    .add-cart {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    .book-img {
+        transform: scale(1);
+        transition: 0.3s;
+    }
+    &:hover {
+        .template-gradient-plain-btn {
+            opacity: 1;
+            visibility: visible;
+            top: 50%;
+        }
+        .book-img {
+            transform: scale(0.98);
+        }
+    }
+}
+
+/* 
+single author start 
+*/
+.single-author {
+    border-radius: 5px;
+    background-color: $choclate-color;
+    padding: 30px;
+    transition: 0.3s;
+
+    .author-btn {
+        opacity: 0;
+        visibility: hidden;
+        &.author-btn-2 {
+            opacity: 1;
+            visibility: visible;
+            color: $secondary-color;
+            font-size: 14px;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &:hover {
+        background-color: $white-color;
+        box-shadow: 0px 0px 30px 0px rgba(71, 6, 0, 0.12);
+        .author-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
